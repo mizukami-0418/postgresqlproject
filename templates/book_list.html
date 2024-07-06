@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Books List{% endblock title %}
+{% block content %}
+<h1>書籍一覧</h1>
+<ul>
+    {% for book in object_list %}
+    <li><a href="{% url 'book-detail' book.pk %}">{{ book.title }}</a> （著者：{{ book.author }}）</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'book-create' %}">新規登録</a>
+{% endblock %}

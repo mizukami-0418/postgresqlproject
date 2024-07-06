@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Delete Book{% endblock title %}
+
+{% block content %}
+<h1>削除確認</h1>
+<p>"{{ object.title }}"を削除してもよろしいですか?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">削除</button>
+</form>
+<a href="{% url 'book-list' %}">一覧へ戻る</a>
+{% endblock %}

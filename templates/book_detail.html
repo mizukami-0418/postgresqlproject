@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Book Detail{% endblock title %}
+{% block content %}
+<h1>{{ object.title }}</h1>
+<p>著者: {{ object.author }}</p>
+<p><a href="{% url 'book-update' book.pk %}">編集はこちら</a></p>
+<p><a href="{% url 'book-delete' book.pk %}">削除する</a></p>
+<p><a href="{% url 'book-list' %}">一覧へ戻る</a></p>
+{% endblock %}

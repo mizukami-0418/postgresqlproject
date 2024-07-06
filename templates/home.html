@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %}
+{% block content %}
+<h1>ホーム画面だよ</h1>
+<p>クラスベースビューを使用して、PostgreSQLを使用するよ</p>
+<p>サンプルサイトだよ</p>
+<p><a href="{% url 'book-list' %}">一覧へ</a></p>
+<p><a href="{% url 'book-create' %}">新規登録</a></p>
+{% endblock %}
